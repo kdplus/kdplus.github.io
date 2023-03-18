@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="kdplus_mika">
+
+
+    <meta name="subtitle" content="五月蠅い">
+
+
+    <meta name="description" content="ほんと、うるさいよ！">
+
+
+
+<title>Ubuntu-Wifi | 42</title>
+
+
+
+    <link rel="icon" href="/image/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+    <script src="fonts/iconfont/iconfont.js"></script>
+    <script src="fonts/iconfont-extra/iconfont.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">「99194853094755497」</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">「99194853094755497」</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Ubuntu-Wifi</h1>
+            
+                <div class="post-meta">
+                    
+                        <div>
+                            Author: <a itemprop="author" rel="author" href="/">kdplus_mika</a>
+                        </div>
+                    
+
+                    
+                        <div>
+                            <span class="post-time">
+                            Date: <a href="#">04 07, 2016&nbsp;&nbsp;18:41:15</a>
+                            </span>
+                        </div>
+                    
+
+                    
+
+                    
+                        <div>
+                            <span class="post-category">
+                                Category:
+                                
+                                    <a href="/categories/linux/">linux</a>
+                                
+                            </span>
+                        </div>
+                    
+
+                    
+                        <div class="post-meta-comments">
+                            <img class="meta-icon" src="/image/comment.png">
+                            <a href="http://kdplus.github.io/2016/04/07/ubuntu-wifi/#disqus_thread">
+                                <span class="disqus-comment-count" data-disqus-url="http://kdplus.github.io/2016/04/07/ubuntu-wifi/#disqus_thread"> <!-- Count will be inserted here --> </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>總之我這台華碩和ubuntu的相性的真的非常差，從裝14.04到現在使用的15.10都沒有一次是可以直接解決這個問題的。<br>接下來我提供幾個我廠試過的解決方案。</p>
+<ul>
+<li>安裝wicd。這個是最方便的，通常也是最好解決的。第一次裝ubuntu14.04的時候遇到了wifi的問題，編譯實在麻煩啊…直接下載了就解決了一切問題誒，好評。然而，後來再遇到這個問題，卻沒能解決我的問題了…差評www  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install wicd</span><br></pre></td></tr></table></figure></li>
+<li>解開軟鎖或者硬鎖<br>我的機子是通過這個方法解決的</li>
+</ul>
+<pre><code>rfkill list #如果有yes的說明被鎖住了
+rfkill unblock all #用這個命令解鎖
+#很多機子，單單上面是解決不了的
+sudo rmmod acer-wmi #可以打開wifi
+vim /etc/modprobe.d/blacklist.conf
+blacklist acer-wmi #將這句加在最後防止被鎖回來
+</code></pre>
+<p><a target="_blank" rel="noopener" href="http://blog.csdn.net/ichsonx/article/details/40903005">參考來源</a></p>
+<ul>
+<li>System Setting<br>有些網卡的驅動是可以在System Setting-&gt;Software&amp;update-&gt;Additional Drivers裏面安裝的</li>
+<li>自己下載驅動編譯安裝<br>……</li>
+<li>買一個內核支持的外接usb網卡<br>這個也是解決的好方法，不用各種折騰2333。不過我比較倒霉有時候需要不斷的插拔網卡和enable開關才能搜到wifi</li>
+<li>重裝系統<br>有時候能奇跡般的解決我的wifi問題,裝的時候放一包乖乖可能有奇效</li>
+</ul>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>kdplus_mika</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://kdplus.github.io/2016/04/07/ubuntu-wifi/">http://kdplus.github.io/2016/04/07/ubuntu-wifi/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/ubuntu/"># ubuntu</a>
+                    
+                        <a href="/tags/wifi/"># wifi</a>
+                    
+                        <a href="/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"># 解决方案</a>
+                    
+                        <a href="/tags/wicd/"># wicd</a>
+                    
+                        <a href="/tags/%E8%BD%AF%E9%94%81/"># 软锁</a>
+                    
+                        <a href="/tags/%E7%A1%AC%E9%94%81/"># 硬锁</a>
+                    
+                        <a href="/tags/%E5%86%85%E6%A0%B8/"># 内核</a>
+                    
+                        <a href="/tags/usb%E7%B6%B2%E5%8D%A1/"># usb網卡</a>
+                    
+                        <a href="/tags/%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/"># 重装系统</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2017/08/13/%E4%B9%B0%E4%BA%86%E4%B8%AA%E5%9F%9F%E5%90%8D/">买了个域名</a>
+            
+            
+            <a class="next" rel="next" href="/2016/03/23/ss/">Shadowsocks-ubuntu-科學上網</a>
+            
+        </section>
+         
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_shortname = 'kdplus';
+    var disqus_config = function() {
+      this.page.url = 'http://kdplus.github.io/2016/04/07/ubuntu-wifi/';
+      this.page.identifier = '2016/04/07/ubuntu-wifi/';
+      this.page.title = 'Ubuntu-Wifi';
+    };
+    (function() {
+      var dsq = document.createElement('script');
+      dsq.async = true;
+      dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+      dsq.setAttribute('data-timestamp', '' + new Date());
+      (document.head || document.body).appendChild(dsq);
+    })();
+  </script>
+   
+  
+  <script
+    id="dsq-count-scr"
+    src="https://kdplus.disqus.com/count.js"
+    async
+  ></script>
+   
+
+    </article>
+</div>
+
+            </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© kdplus_mika | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"hijiki"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.1},"log":false});</script></body>
+
+</html>

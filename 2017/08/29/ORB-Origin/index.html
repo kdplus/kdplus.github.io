@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="kdplus_mika">
+
+
+    <meta name="subtitle" content="五月蠅い">
+
+
+    <meta name="description" content="ほんと、うるさいよ！">
+
+
+
+<title>ウルトラマンオーブ THE ORIGIN SAGA | 42</title>
+
+
+
+    <link rel="icon" href="/image/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+    <script src="fonts/iconfont/iconfont.js"></script>
+    <script src="fonts/iconfont-extra/iconfont.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">「99194853094755497」</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">「99194853094755497」</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">ウルトラマンオーブ THE ORIGIN SAGA</h1>
+            
+                <div class="post-meta">
+                    
+                        <div>
+                            Author: <a itemprop="author" rel="author" href="/">kdplus_mika</a>
+                        </div>
+                    
+
+                    
+                        <div>
+                            <span class="post-time">
+                            Date: <a href="#">08 29, 2017&nbsp;&nbsp;03:29:01</a>
+                            </span>
+                        </div>
+                    
+
+                    
+
+                    
+                        <div>
+                            <span class="post-category">
+                                Category:
+                                
+                                    <a href="/categories/%E7%95%AA/">番</a>
+                                
+                            </span>
+                        </div>
+                    
+
+                    
+                        <div class="post-meta-comments">
+                            <img class="meta-icon" src="/image/comment.png">
+                            <a href="http://kdplus.github.io/2017/08/29/ORB-Origin/#disqus_thread">
+                                <span class="disqus-comment-count" data-disqus-url="http://kdplus.github.io/2017/08/29/ORB-Origin/#disqus_thread"> <!-- Count will be inserted here --> </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h3 id="感觉"><a href="#感觉" class="headerlink" title="感觉"></a>感觉</h3><p>看完正剧之后，发现还有 12 集前传，兴致勃勃的抓了下来，一口气把欧布起源（前传）给补了。说实话，有点小失望，可能是正传中欢乐愉快的好好地讲了每个简单的小故事和一条主线，并且讲的清楚，让我对前传也产生了过高的期待。</p>
+<h3 id="一句话"><a href="#一句话" class="headerlink" title="一句话"></a>一句话</h3><p>起源里面试图描绘一个宏伟的史诗级别的故事，来讲述刚成为奥特曼的凯在首次任务中是如何成长的，如何面对自己心中对力量的疑惑，以及对闇と光等对立话题的思考。剧中的另外一个重点是伽古拉是怎么从凯的好基友，变成正传中反派人物的。</p>
+<img src="/images/timg.jpeg" class="full-image" alt="起源，起源" />
+
+<span id="more"></span>
+
+<h3 id="吐槽"><a href="#吐槽" class="headerlink" title="吐槽"></a>吐槽</h3><p>剧中交代了凯被光选中之后，接到去卡农行星执行正义的任务。一路上，不断的表现凯的弱智，相反的衬托伽古拉的冷静。瞬间就明白了，原来想出这招给伽古拉吸粉，让大家开心开心，但你也不能把凯安排成智障啊…（伽古拉成最大赢家，笑</p>
+<p><img src="/images/85205bb5c9ea15ce350b1289bf003af33b87b260.jpg" alt="伽古拉"></p>
+<p>当然这么走下去，也非常好，至少解释了伽古拉为什么黑化，这么智障一个人被选中了，我却变成配角黑化理由充分ww。可惜这只是前期，后期伽古拉戏份爆减，除了最后救了一下凯，基本没有什么戏份。结果起源仍然没有交代伽古拉是怎么彻底黑化的，如何成为反派的。</p>
+<p>前半部分的舞台一直在卡农行星上，描绘了一个非常宏大的剧情的开头，搞得我特别期待后面的展开，而且还和地球人这边舞台埋下伏笔，为后半部分舞台转移到地球上做了铺垫。但你看到后半部分才发现，前面都白铺垫了，首先是地球上的能和女王心灵感应的男孩子，在整个剧情中就是一个基本很废柴的角色，他就没有推动过剧情，唯一的作用就是抱了一下解读的种子。</p>
+<p>其实我一开始对这个 7 万光年的心灵感应很看好，但是后面气氛越来越不对，简直就白学起来了… 你一个好好的小师妹就放着不管了，和女王大人神交emmmm</p>
+<p><img src="/images/WX20170829-031100.png" alt="白学"></p>
+<p>太白学了，真的太白学了。你看看小师妹的白学的表情，明明是我先来的…</p>
+<p><img src="/images/WX20170829-031352.png" alt="白学啊！"></p>
+<p>现在白学都是这么轻易的了么。看女王嫉妒的眼神，还有凯这个时候特意跑去牵他们两的cp2333。</p>
+<p>这个剧里面另一个智障就是女王，不不不，女王才是这里面最智障的。</p>
+<ul>
+<li>第一次智障：我就是不战斗，理由是怪兽的孩子会变成遗孤。</li>
+<li>第二次智障：queen 一定是要和我沟通吧！</li>
+<li>第三次智障：嗯，queen 扎我一定是被控制了。</li>
+<li>第四次智障：我再也不变战神了。</li>
+<li>第五次智障：我 tm 还是要去地球！</li>
+<li>第六次智障：是 queen 在悲伤！（哦，错了这是凯的智障</li>
+<li>第七次智障：我要变成战神和 queen 对话</li>
+<li>第八次智障：queen 我们来改变世界吧</li>
+<li>第九次智障：啊，我怎么又被 queen 扎了，emmmm，好像没戏份了23333</li>
+</ul>
+<p>所以女王的作用就是变成战神然后挨打，然后造成大危机么。真心太智障了</p>
+<p>在角色的刻画上面，大反派基赛的毁灭计划从头到尾都动机不明，并且含糊不清，每次到谈论主题的时候正反方的台词都故弄玄虚，逻辑不清。这就算了，这里面最不清楚的就是 queen，她的意识是没有人交代的，这么重要的一个反派怪兽，和女王对立的怪兽，为什么要保护生命之树，为什么听从赛基都是不明的… 感觉编剧已经失控了</p>
+<p><img src="/images/WX20170829-032753.png" alt="帅"></p>
+<p>不过凯虽然智障，但是还是依然很帅，伽古拉也比正传中的癫笑状态要收敛多了，但是他每次一歪嘴巴，我就怕他笑…</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>kdplus_mika</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://kdplus.github.io/2017/08/29/ORB-Origin/">http://kdplus.github.io/2017/08/29/ORB-Origin/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E5%A5%A5%E7%89%B9%E6%9B%BC/"># 奥特曼</a>
+                    
+                        <a href="/tags/%E6%AC%A7%E5%B8%83/"># 欧布</a>
+                    
+                        <a href="/tags/%E5%89%8D%E4%BC%A0/"># 前传</a>
+                    
+                        <a href="/tags/%E4%BC%BD%E5%8F%A4%E6%8B%89/"># 伽古拉</a>
+                    
+                        <a href="/tags/%E6%99%BA%E9%9A%9C%E8%A7%92%E8%89%B2/"># 智障角色</a>
+                    
+                        <a href="/tags/%E5%89%A7%E6%83%85%E9%93%BA%E5%9E%AB/"># 剧情铺垫</a>
+                    
+                        <a href="/tags/%E5%9C%B0%E7%90%83/"># 地球</a>
+                    
+                        <a href="/tags/%E4%B8%BB%E9%A2%98%E5%90%AB%E7%B3%8A/"># 主题含糊</a>
+                    
+                        <a href="/tags/queen/"># queen</a>
+                    
+                        <a href="/tags/%E8%A7%92%E8%89%B2%E5%88%BB%E7%94%BB/"># 角色刻画</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2017/09/03/4-years/">4年份的流水账</a>
+            
+            
+            <a class="next" rel="next" href="/2017/08/27/ORB/">ウルトラマンオーブ</a>
+            
+        </section>
+         
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_shortname = 'kdplus';
+    var disqus_config = function() {
+      this.page.url = 'http://kdplus.github.io/2017/08/29/ORB-Origin/';
+      this.page.identifier = '2017/08/29/ORB-Origin/';
+      this.page.title = 'ウルトラマンオーブ THE ORIGIN SAGA';
+    };
+    (function() {
+      var dsq = document.createElement('script');
+      dsq.async = true;
+      dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+      dsq.setAttribute('data-timestamp', '' + new Date());
+      (document.head || document.body).appendChild(dsq);
+    })();
+  </script>
+   
+  
+  <script
+    id="dsq-count-scr"
+    src="https://kdplus.disqus.com/count.js"
+    async
+  ></script>
+   
+
+    </article>
+</div>
+
+            </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© kdplus_mika | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"hijiki"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.1},"log":false});</script></body>
+
+</html>

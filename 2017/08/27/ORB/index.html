@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="kdplus_mika">
+
+
+    <meta name="subtitle" content="五月蠅い">
+
+
+    <meta name="description" content="ほんと、うるさいよ！">
+
+
+
+<title>ウルトラマンオーブ | 42</title>
+
+
+
+    <link rel="icon" href="/image/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+    <script src="fonts/iconfont/iconfont.js"></script>
+    <script src="fonts/iconfont-extra/iconfont.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">「99194853094755497」</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">「99194853094755497」</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">ウルトラマンオーブ</h1>
+            
+                <div class="post-meta">
+                    
+                        <div>
+                            Author: <a itemprop="author" rel="author" href="/">kdplus_mika</a>
+                        </div>
+                    
+
+                    
+                        <div>
+                            <span class="post-time">
+                            Date: <a href="#">08 27, 2017&nbsp;&nbsp;00:33:50</a>
+                            </span>
+                        </div>
+                    
+
+                    
+                        <span class="update-time">
+                        Updated: <a href="#">03 15, 2023&nbsp;&nbsp;15:52:00</a>
+                        </span>
+                    
+
+                    
+                        <div>
+                            <span class="post-category">
+                                Category:
+                                
+                                    <a href="/categories/%E7%95%AA/">番</a>
+                                
+                            </span>
+                        </div>
+                    
+
+                    
+                        <div class="post-meta-comments">
+                            <img class="meta-icon" src="/image/comment.png">
+                            <a href="http://kdplus.github.io/2017/08/27/ORB/#disqus_thread">
+                                <span class="disqus-comment-count" data-disqus-url="http://kdplus.github.io/2017/08/27/ORB/#disqus_thread"> <!-- Count will be inserted here --> </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2 id="Ultraman-Orb"><a href="#Ultraman-Orb" class="headerlink" title="Ultraman Orb"></a>Ultraman Orb</h2><img src="/images/ultramanorb.jpg" class="full-image" alt="欧布" title="欧布" />
+
+<p>前几天和 ZB 聊起来最近的奥特曼新作捷德，于是被安利了这部欧布奥特曼，才知道这部是奥特曼 50 年的大制作，再加上 ZB 强烈安利，直接把资源拷给了我，那是不得不看了。而实际上在这之前我只看过泰罗奥特曼，迪迦奥特曼，一部分梦比优斯，银河，还有银河传说，可以说不是一个奥特迷，趁这个机会补一补知识。</p>
+<span id="more"></span>
+
+<p>算一算初代奥特曼的播出时间是 1966 年，2016年播出的欧布的确是 50 周年，这部欧布从第一集开始就给我很不同的感觉，也不知道是不是从非长篇奥特曼开始的变化，主角并不是作为防卫队的队员存在的，而且在这部中的防卫队可以说仅仅是打杂的，欧布中主要以 SSP（Someting Search People）这样一个异现象新闻网站小组的成员（他们还有网站… <a target="_blank" rel="noopener" href="http://somethingsearchpeople.com/">SSP</a>）以及红凯（欧布的人间体）作为主角展开故事的。如果没有怪兽的话，日常段就和普通日剧风格相似</p>
+<p><img src="/images/9f384fe4ly1fit0j4ayuaj21kw0w0wls.jpg" alt="Alt text"></p>
+<p>男主角红凯可以说是非常帅了，装逼真是迷倒万千女性（我）。而这部奥特曼里面居然还像热血漫一样设置了男主的基友来做反派，这个基友 emmmm… 可以从图片里面感受一下，既然设定了基友大家的剧情，自然整个剧的核心概念是以闇と光的二元对立展开的，可以说是老套但是不俗的演出。</p>
+<p><img src="/images/jiagura.jpg" alt="伽古拉"></p>
+<p>整个剧的风格可以说轻松愉快，非常符合我的胃口，并且欧布的形态实在是太多了（不过后期只有贝利亚形态和起源形态比较起作用了），看的我非常爽。尤其是多亏了基友，有非常多的人间体流畅打斗。以及不知道是不是经费充足还是 50 周年大出血，特效做的比以往的以及新作捷德的都要好。</p>
+<p>从怪兽的设计来说，还特地制作了古籍，按照古籍上的魔王兽们作为整部剧出现的怪兽的剧本，感觉非常走心（当然这个古籍大概率能够圈钱，说到圈钱不如欧布的各类玩具圈钱）。说到走心，没有这么走心的字幕组我应该都不知道这部剧的走心的很多细节。</p>
+<p><img src="/images/WX20170827-013929.png" alt="隐藏标题"></p>
+<p>打个比方，每集会有一个隐藏标题，出现在台词中，都历年各版本奥特曼的中剧情的标题。从网上得来的情报，这个致敬是这样来的</p>
+<blockquote>
+<p>最初欧布并没有“隐藏标题”这个致敬方式，但是在制作第一集的时候，剧组发现可以用到『奥特Q』的标题，于是便每集这么玩了，“隐藏标题”也就这么意外诞生了</p>
+</blockquote>
+<p><img src="/images/WX20170827-013447.png" alt="登场"></p>
+<p>拍摄方面比方，欧布的第一集迪迦和奥特曼合体的出场的仰拍是在致敬当年迪迦的出场的仰拍等等一系列。</p>
+<div class='iframe-container'><iframe src=//player.bilibili.com/player.html?aid=7761259&bvid=BV1Ds411a7wF&cid=12725222&page=1&high_quality=1 scrolling=no border=0 frameborder=no framespacing=0 allowfullscreen=true width=100% height=100%> </iframe></div>
+
+<div class='iframe-container'><iframe src=//player.bilibili.com/player.html?aid=13397460&bvid=BV1Dx411E78f&cid=21951975&page=1 scrolling=no border=0 frameborder=no framespacing=0 allowfullscreen=true> </iframe></div>
+
+<p>有兴趣的，可以看一下这个花絮特辑，mmp 小组辛苦233。其中好多拍摄手法，包括龙卷风的卡，使用把房子倒过来爆破的手法，真的非常用心。</p>
+<p><img src="/images/WX20170901-171302.png" alt="拍摄"></p>
+<p>飞的时候居然是倒过来拍的，吃惊…</p>
+<p><img src="/images/f636afc379310a5583302b72bd4543a98226101b.jpg" alt="基友俩"></p>
+<p>总的来说，看下来让我非常舒服的一部奥特曼，稍稍还有点感动了。时隔多年，又重新补了奥特曼，美滋滋。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>kdplus_mika</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://kdplus.github.io/2017/08/27/ORB/">http://kdplus.github.io/2017/08/27/ORB/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E5%A5%A5%E7%89%B9%E6%9B%BC/"># 奥特曼</a>
+                    
+                        <a href="/tags/%E6%AC%A7%E5%B8%83/"># 欧布</a>
+                    
+                        <a href="/tags/SSP/"># SSP</a>
+                    
+                        <a href="/tags/%E7%BA%A2%E5%87%AF/"># 红凯</a>
+                    
+                        <a href="/tags/%E6%80%AA%E5%85%BD/"># 怪兽</a>
+                    
+                        <a href="/tags/%E7%89%B9%E6%95%88/"># 特效</a>
+                    
+                        <a href="/tags/%E9%9A%90%E8%97%8F%E6%A0%87%E9%A2%98/"># 隐藏标题</a>
+                    
+                        <a href="/tags/%E6%8B%8D%E6%91%84/"># 拍摄</a>
+                    
+                        <a href="/tags/%E5%9F%BA%E5%8F%8B/"># 基友</a>
+                    
+                        <a href="/tags/%E8%8A%B1%E7%B5%AE%E7%89%B9%E8%BE%91/"># 花絮特辑.</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2017/08/29/ORB-Origin/">ウルトラマンオーブ THE ORIGIN SAGA</a>
+            
+            
+            <a class="next" rel="next" href="/2017/08/13/%E4%B9%B0%E4%BA%86%E4%B8%AA%E5%9F%9F%E5%90%8D/">买了个域名</a>
+            
+        </section>
+         
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_shortname = 'kdplus';
+    var disqus_config = function() {
+      this.page.url = 'http://kdplus.github.io/2017/08/27/ORB/';
+      this.page.identifier = '2017/08/27/ORB/';
+      this.page.title = 'ウルトラマンオーブ';
+    };
+    (function() {
+      var dsq = document.createElement('script');
+      dsq.async = true;
+      dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+      dsq.setAttribute('data-timestamp', '' + new Date());
+      (document.head || document.body).appendChild(dsq);
+    })();
+  </script>
+   
+  
+  <script
+    id="dsq-count-scr"
+    src="https://kdplus.disqus.com/count.js"
+    async
+  ></script>
+   
+
+    </article>
+</div>
+
+            </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© kdplus_mika | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"hijiki"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.1},"log":false});</script></body>
+
+</html>
